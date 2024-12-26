@@ -1,104 +1,37 @@
 PS C:\Users\junai\Desktop\coding\Flask Projects\Flask-DB> python -m venv venv
 PS C:\Users\junai\Desktop\coding\Flask Projects\Flask-DB> .\venv\Scripts\activate                                                       
 (venv) PS C:\Users\junai\Desktop\coding\Flask Projects\Flask-DB> pip install Flask                                                      
-Collecting Flask
-  Using cached flask-3.1.0-py3-none-any.whl.metadata (2.7 kB)
-Collecting Werkzeug>=3.1 (from Flask)
-  Using cached werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
-Collecting Jinja2>=3.1.2 (from Flask)
-  Using cached jinja2-3.1.5-py3-none-any.whl.metadata (2.6 kB)
-Collecting itsdangerous>=2.2 (from Flask)
-  Using cached itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
-Collecting click>=8.1.3 (from Flask)
-  Using cached click-8.1.8-py3-none-any.whl.metadata (2.3 kB)
-Collecting blinker>=1.9 (from Flask)
-  Using cached blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
-Collecting colorama (from click>=8.1.3->Flask)
-  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
-Collecting MarkupSafe>=2.0 (from Jinja2>=3.1.2->Flask)
-  Using cached MarkupSafe-3.0.2-cp312-cp312-win_amd64.whl.metadata (4.1 kB)
-Using cached flask-3.1.0-py3-none-any.whl (102 kB)
-Using cached blinker-1.9.0-py3-none-any.whl (8.5 kB)
-Using cached click-8.1.8-py3-none-any.whl (98 kB)
-Using cached itsdangerous-2.2.0-py3-none-any.whl (16 kB)
-Using cached jinja2-3.1.5-py3-none-any.whl (134 kB)
-Using cached werkzeug-3.1.3-py3-none-any.whl (224 kB)
-Using cached MarkupSafe-3.0.2-cp312-cp312-win_amd64.whl (15 kB)
-Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
-Installing collected packages: MarkupSafe, itsdangerous, colorama, blinker, Werkzeug, Jinja2, click, Flask
-Successfully installed Flask-3.1.0 Jinja2-3.1.5 MarkupSafe-3.0.2 Werkzeug-3.1.3 blinker-1.9.0 click-8.1.8 colorama-0.4.6 itsdangerous-2.2.0
-
-[notice] A new release of pip is available: 24.0 -> 24.3.1
-[notice] To update, run: python.exe -m pip install --upgrade pip
 (venv) PS C:\Users\junai\Desktop\coding\Flask Projects\Flask-DB> python -m pip install --upgrade pip
-Requirement already satisfied: pip in c:\users\junai\desktop\coding\flask projects\flask-db\venv\lib\site-packages (24.0)
-Collecting pip
-  Downloading pip-24.3.1-py3-none-any.whl.metadata (3.7 kB)
-Downloading pip-24.3.1-py3-none-any.whl (1.8 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 885.6 kB/s eta 0:00:00
-Installing collected packages: pip
-  Attempting uninstall: pip
-    Found existing installation: pip 24.0
-    Uninstalling pip-24.0:
-      Successfully uninstalled pip-24.0
-Successfully installed pip-24.3.1
 (venv) PS C:\Users\junai\Desktop\coding\Flask Projects\Flask-DB> pip install Flask-SQLAlchemy
-Collecting Flask-SQLAlchemy
-  Using cached flask_sqlalchemy-3.1.1-py3-none-any.whl.metadata (3.4 kB)
-Requirement already satisfied: flask>=2.2.5 in c:\users\junai\desktop\coding\flask projects\flask-db\venv\lib\site-packages (from Flask-SQLAlchemy) (3.1.0)
-Collecting sqlalchemy>=2.0.16 (from Flask-SQLAlchemy)
-  Using cached SQLAlchemy-2.0.36-cp312-cp312-win_amd64.whl.metadata (9.9 kB)
-Requirement already satisfied: Werkzeug>=3.1 in c:\users\junai\desktop\coding\flask projects\flask-db\venv\lib\site-packages (from flask>=2.2.5->Flask-SQLAlchemy) (3.1.3)
-Requirement already satisfied: Jinja2>=3.1.2 in c:\users\junai\desktop\coding\flask projects\flask-db\venv\lib\site-packages (from flask>=2.2.5->Flask-SQLAlchemy) (3.1.5)
-Requirement already satisfied: itsdangerous>=2.2 in c:\users\junai\desktop\coding\flask projects\flask-db\venv\lib\site-packages (from flask>=2.2.5->Flask-SQLAlchemy) (2.2.0)
-Requirement already satisfied: click>=8.1.3 in c:\users\junai\desktop\coding\flask projects\flask-db\venv\lib\site-packages (from flask>=2.2.5->Flask-SQLAlchemy) (8.1.8)
-Requirement already satisfied: blinker>=1.9 in c:\users\junai\desktop\coding\flask projects\flask-db\venv\lib\site-packages (from flask>=2.2.5->Flask-SQLAlchemy) (1.9.0)
-Collecting typing-extensions>=4.6.0 (from sqlalchemy>=2.0.16->Flask-SQLAlchemy)
-  Using cached typing_extensions-4.12.2-py3-none-any.whl.metadata (3.0 kB)
-Collecting greenlet!=0.4.17 (from sqlalchemy>=2.0.16->Flask-SQLAlchemy)
-  Using cached greenlet-3.1.1-cp312-cp312-win_amd64.whl.metadata (3.9 kB)
-Requirement already satisfied: colorama in c:\users\junai\desktop\coding\flask projects\flask-db\venv\lib\site-packages (from click>=8.1.3->flask>=2.2.5->Flask-SQLAlchemy) (0.4.6)
-Requirement already satisfied: MarkupSafe>=2.0 in c:\users\junai\desktop\coding\flask projects\flask-db\venv\lib\site-packages (from Jinja2>=3.1.2->flask>=2.2.5->Flask-SQLAlchemy) (3.0.2)
-Using cached flask_sqlalchemy-3.1.1-py3-none-any.whl (25 kB)
-Using cached SQLAlchemy-2.0.36-cp312-cp312-win_amd64.whl (2.1 MB)
-Using cached greenlet-3.1.1-cp312-cp312-win_amd64.whl (299 kB)
-Using cached typing_extensions-4.12.2-py3-none-any.whl (37 kB)
-Installing collected packages: typing-extensions, greenlet, sqlalchemy, Flask-SQLAlchemy
-Successfully installed Flask-SQLAlchemy-3.1.1 greenlet-3.1.1 sqlalchemy-2.0.36 typing-extensions-4.12.2
 (venv) PS C:\Users\junai\Desktop\coding\Flask Projects\Flask-DB> pip install Flask-Migrate
-Collecting Flask-Migrate
-  Downloading Flask_Migrate-4.0.7-py3-none-any.whl.metadata (3.1 kB)
-Requirement already satisfied: Flask>=0.9 in c:\users\junai\desktop\coding\flask projects\flask-db\venv\lib\site-packages (from Flask-Migrate) (3.1.0)
-Requirement already satisfied: Flask-SQLAlchemy>=1.0 in c:\users\junai\desktop\coding\flask projects\flask-db\venv\lib\site-packages (from Flask-Migrate) (3.1.1)
-Collecting alembic>=1.9.0 (from Flask-Migrate)
-  Downloading alembic-1.14.0-py3-none-any.whl.metadata (7.4 kB)
-Requirement already satisfied: SQLAlchemy>=1.3.0 in c:\users\junai\desktop\coding\flask projects\flask-db\venv\lib\site-packages (from alembic>=1.9.0->Flask-Migrate) (2.0.36)
-Collecting Mako (from alembic>=1.9.0->Flask-Migrate)
-  Downloading Mako-1.3.8-py3-none-any.whl.metadata (2.9 kB)
-Requirement already satisfied: typing-extensions>=4 in c:\users\junai\desktop\coding\flask projects\flask-db\venv\lib\site-packages (from alembic>=1.9.0->Flask-Migrate) (4.12.2)
-Requirement already satisfied: Werkzeug>=3.1 in c:\users\junai\desktop\coding\flask projects\flask-db\venv\lib\site-packages (from Flask>=0.9->Flask-Migrate) (3.1.3)
-Requirement already satisfied: Jinja2>=3.1.2 in c:\users\junai\desktop\coding\flask projects\flask-db\venv\lib\site-packages (from Flask>=0.9->Flask-Migrate) (3.1.5)
-Requirement already satisfied: itsdangerous>=2.2 in c:\users\junai\desktop\coding\flask projects\flask-db\venv\lib\site-packages (from Flask>=0.9->Flask-Migrate) (2.2.0)
-Requirement already satisfied: click>=8.1.3 in c:\users\junai\desktop\coding\flask projects\flask-db\venv\lib\site-packages (from Flask>=0.9->Flask-Migrate) (8.1.8)
-Requirement already satisfied: blinker>=1.9 in c:\users\junai\desktop\coding\flask projects\flask-db\venv\lib\site-packages (from Flask>=0.9->Flask-Migrate) (1.9.0)
-Requirement already satisfied: colorama in c:\users\junai\desktop\coding\flask projects\flask-db\venv\lib\site-packages (from click>=8.1.3->Flask>=0.9->Flask-Migrate) (0.4.6)
-Requirement already satisfied: MarkupSafe>=2.0 in c:\users\junai\desktop\coding\flask projects\flask-db\venv\lib\site-packages (from Jinja2>=3.1.2->Flask>=0.9->Flask-Migrate) (3.0.2)
-Requirement already satisfied: greenlet!=0.4.17 in c:\users\junai\desktop\coding\flask projects\flask-db\venv\lib\site-packages (from SQLAlchemy>=1.3.0->alembic>=1.9.0->Flask-Migrate) (3.1.1)
-Downloading Flask_Migrate-4.0.7-py3-none-any.whl (21 kB)
-Downloading alembic-1.14.0-py3-none-any.whl (233 kB)
-Downloading Mako-1.3.8-py3-none-any.whl (78 kB)
-Installing collected packages: Mako, alembic, Flask-Migrate
-Successfully installed Flask-Migrate-4.0.7 Mako-1.3.8 alembic-1.14.0
 (venv) PS C:\Users\junai\Desktop\coding\Flask Projects\Flask-DB> pip install psycopg2-binary
-Collecting psycopg2-binary
-  Downloading psycopg2_binary-2.9.10-cp312-cp312-win_amd64.whl.metadata (5.0 kB)
-Downloading psycopg2_binary-2.9.10-cp312-cp312-win_amd64.whl (1.2 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 4.1 MB/s eta 0:00:00
-Installing collected packages: psycopg2-binary
-Successfully installed psycopg2-binary-2.9.10
 (venv) PS C:\Users\junai\Desktop\coding\Flask Projects\Flask-DB> python --version
 Python 3.12.2
 (venv) PS C:\Users\junai\Desktop\coding\Flask Projects\Flask-DB> 
 
 PS C:\Users\junai\Desktop\coding\Flask Projects\Flask-DB> .\venv\Scripts\activate
 (venv) PS C:\Users\junai\Desktop\coding\Flask Projects\Flask-DB> pip freeze > requirements.txt
+
+(venv) PS C:\Users\junai\Desktop\coding\Flask Projects\Flask-DB> git init   
+(venv) PS C:\Users\junai\Desktop\coding\Flask Projects\Flask-DB> git remote add origin https://github.com/Ken-Kanike/Flask-DB-Vercel
+(venv) PS C:\Users\junai\Desktop\coding\Flask Projects\Flask-DB> git add .
+(venv) PS C:\Users\junai\Desktop\coding\Flask Projects\Flask-DB> git commit -m "Adding files"
+(venv) PS C:\Users\junai\Desktop\coding\Flask Projects\Flask-DB> git branch 
+* master
+(venv) PS C:\Users\junai\Desktop\coding\Flask Projects\Flask-DB> git push -u origin master
+Enumerating objects: 2377, done.
+Counting objects: 100% (2377/2377), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2340/2340), done.
+Writing objects: 100% (2377/2377), 13.25 MiB | 1.79 MiB/s, done.
+Total 2377 (delta 99), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (99/99), done.
+To https://github.com/Ken-Kanike/Flask-DB-Vercel
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+(venv) PS C:\Users\junai\Desktop\coding\Flask Projects\Flask-DB> 
+
+.\venv\Scripts\activate
+flask db init
+flask db migrate -m "Initial migration"
+flask db upgrade
