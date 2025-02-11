@@ -12,7 +12,7 @@ from app.models import User, SessionLocal, hash_password
 from app.auth import *
 
 # Intialization
-app = Flask(__name__, "/static", static_folder=".\\app\\Static", template_folder=".\\app\\Templates")
+app = Flask(__name__, "/static", static_folder=".\\Static", template_folder=".\\Templates")
 # Generate a server key
 server_key = generate_server_key()
 # Set a secret key for Flask sessions
