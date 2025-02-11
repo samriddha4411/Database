@@ -55,6 +55,3 @@ def __():
 @app.route("/<any>")
 def _any(any: str):
     return redirect(f"/err?code=404&message='{any}', Not Found")
-
-if __name__ == "__main__":
-    app.run(debug=True)

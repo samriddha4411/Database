@@ -25,15 +25,3 @@ def double_sha256(server_key: str, auth_info: dict):
     second_hash = hashlib.sha256(first_hash.encode()).hexdigest()
     
     return second_hash
-
-# Example usage
-if __name__ == "__main__":
-    server_key = generate_server_key()
-    print(f"Generated Server Key: {server_key}")
-    
-    auth_info = {
-        "username": "example_user",
-        "password": "example_password"
-    }
-    hashed_info = double_sha256(server_key, auth_info)
-    print(f"Double SHA-256 Hashed Info: {hashed_info}")
