@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block links %}
+<link rel="stylesheet" href="{{ url_for('static', filename='auth.css') }}">
+{% endblock %}
+
+{% block navigate %}
+    <a href="/">Homepage</a>
+    <a href="/listing">Database Indexing</a>
+{% endblock %}
+
+{% block body %}
+    <div class="auth-section">
+        <div class="form-container">
+            <input type="radio" id="signin" name="tab" checked>
+            <input type="radio" id="signup" name="tab">
+            <div class="tabs">
+                <label for="signin" class="tab">Sign In</label>
+                <label for="signup" class="tab">Sign Up</label>
+            </div>
+            <div class="forms">
+                <form action="/login" method="post" class="signin-form">
+                    <div class="form-group">
+                        <label for="signin-username">Username:</label>
+                        <input type="text" id="signin-username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signin-password">Password:</label>
+                        <input type="password" id="signin-password" name="password" required>
+                    </div>
+                    <button type="submit" class="auth-button">Sign In</button>
+                    <p class="toggle-text">Don't have an account? <label for="signup" class="toggle-link">Sign Up</label></p>
+                </form>
+                <form action="/signup" method="post" class="signup-form">
+                    <div class="form-group">
+                        <label for="signup-username">Username:</label>
+                        <input type="text" id="signup-username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email:</label>
+                        <input type="email" id="signup-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password:</label>
+                        <input type="password" id="signup-password" name="password" required>
+                    </div>
+                    <button type="submit" class="auth-button">Sign Up</button>
+                    <p class="toggle-text">Already have an account? <label for="signin" class="toggle-link">Sign In</label></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block links %}
+<link rel="stylesheet" href="/static/listing.css">
+{% endblock %}
+
+{% block navigate %}
+    <a href="/">Homepage</a>
+    <a href="/dashboard">Dashboard</a>
+{% endblock %}
+
+{% block body %}
+    <h2 class="heading">
+        Indexing Users
+    </h2>
+    <ul class="db-list">
+    {% for us in LIST %}
+        <li><a href="/admin/user?usid={{us.split(',')[2]}}">{{us.split(',')[0]}}</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}

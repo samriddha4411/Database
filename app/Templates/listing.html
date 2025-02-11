@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block links %}
+<link rel="stylesheet" href="/static/listing.css">
+{% endblock %}
+
+{% block navigate %}
+    <a href="/">Homepage</a>
+    <a href="/dashboard">Dashboard</a>
+{% endblock %}
+
+{% block body %}
+    <ul class="db-list">
+    {% for db in LIST %}
+        <li><a href="/db/{{db}}">{{db}}</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}

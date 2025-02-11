@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block links %}
+<link rel="stylesheet" href="{{ url_for('static', filename='manage.css') }}">
+{% endblock %}
+
+{% block navigate %}
+    <a href="/">Homepage</a>
+    <a href="/listing">Database Indexing</a>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/db/manage">Manage Databases</a>
+{% endblock %}
+
+{% block body %}
+    <h2>Database Manager</h2>
+    <div class="user-list">
+        <h3>Users</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Timestamp</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.timestamp }}</td>
+                    <td>
+                        <a href="{{ url_for('edit_user', user_id=user.id) }}">Edit</a>
+                        <a href="{{ url_for('delete_user', user_id=user.id) }}" onclick="return confirm('Are you sure?')">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="add-user">
+        <h3>Add User</h3>
+        <form action="{{ url_for('add_user') }}" method="post">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Add User</button>
+        </form>
+    </div>
+{% endblock %}

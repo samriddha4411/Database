@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ TITLE }}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+        {% block links %}
+        {% endblock %}
+    </head>
+    <body>
+        <header class="Header">
+            <h4 class="Logo">
+                CyberDeep Corporations
+            </h4>
+            <nav class="navigate">
+                {% block navigate %}
+                {% endblock %}
+            </nav>
+        </header>
+        <main class="content">
+            {% block body %}
+            {% endblock %}
+        </main>
+        <footer class="Footer">
+            <p>&copy; 2025 CyberDeep Corporations<p>
+        </footer>
+
+        <!-- Cookie Consent Notification -->
+        <div id="cookie-consent" class="cookie-consent">
+            <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+            <button onclick="acceptCookies()">I Agree</button>
+        </div>
+
+        <script>
+            function acceptCookies() {
+                document.cookie = "consent=true; max-age=" + 60*60*24*30 + "; path=/";  // 30 days
+                document.getElementById('cookie-consent').style.display = 'none';
+            }
+
+            window.onload = function() {
+                if (!document.cookie.split('; ').find(row => row.startsWith('consent='))) {
+                    document.getElementById('cookie-consent').style.display = 'block';
+                }
+            }
+        </script>
+    </body>
+</html>
