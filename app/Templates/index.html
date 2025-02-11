@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block links %}
+<link rel="stylesheet" href="/static/index.css">
+{% endblock %}
+
+{% block navigate %}
+    <a href="/">Homepage</a>
+    <a href="/listing">Database Indexing</a>
+{% endblock %}
+
+{% block body %}
+    <div class="welcome-section">
+        <h1>Welcome to CyberDeep Corporations</h1>
+        <p>At CyberDeep Corporations, we specialize in providing advanced database solutions to meet your business needs. Our services include:</p>
+        <ul class="services-list">
+            <li>Database Design and Architecture</li>
+            <li>Data Migration and Integration</li>
+            <li>Database Performance Tuning</li>
+            <li>Data Security and Compliance</li>
+            <li>Cloud Database Solutions</li>
+        </ul>
+        <p>Explore our <a href="/listing">Database Indexing</a> to see the comprehensive list of databases we manage and maintain.</p>
+    </div>
+{% endblock %}
