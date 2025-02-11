@@ -1,5 +1,5 @@
 {
-    "builds":[
+    "builds": [
         {
             "src": "run.py",
             "use": "@vercel/python"
@@ -7,7 +7,51 @@
     ],
     "routes": [
         {
-            "src": "/(.*)",
+            "src": "/",
+            "dest": "run.py"
+        },
+        {
+            "src": "/listing",
+            "dest": "run.py"
+        },
+        {
+            "src": "/auth",
+            "dest": "run.py"
+        },
+        {
+            "src": "/login",
+            "dest": "run.py"
+        },
+        {
+            "src": "/signup",
+            "dest": "run.py"
+        },
+        {
+            "src": "/logout",
+            "dest": "run.py"
+        },
+        {
+            "src": "/db/(.*)",
+            "dest": "run.py"
+        },
+        {
+            "src": "/admin",
+            "dest": "run.py"
+        },
+        {
+            "src": "/admin/add_user",
+            "dest": "run.py"
+        },
+        {
+            "src": "/admin/edit_user/(.*)",
+            "dest": "run.py"
+        },
+        {
+            "src": "/admin/delete_user/(.*)",
+            "dest": "run.py"
+        },
+        {
+            "src": "/dashboard",
             "dest": "run.py"
         }
     ]
