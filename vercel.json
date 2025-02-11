@@ -54,5 +54,6 @@
             "src": "/dashboard",
             "dest": "run.py"
         }
-    ]
+    ],
+    "target": "preview"
 }
