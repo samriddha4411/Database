@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+<link rel="stylesheet" href="/static/error.css">
+
+{% block navigate %}
+<li><a href="/">Homepage</a></li>
+{% endblock %}
+
+{% block body %}
+<center>
+    <h1 class="code">{{ CODE }}</h1>
+    <h2 class="text">{{ TEXT }}</h2>
+</center>
+{% endblock %}

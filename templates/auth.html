@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block navigate %}
+<li><a href="/">Homepage</a></li>
+<li><a href="/api-docs">API Documentation</a></li>
+<li><a href="/about">About</a></li>
+<li><a href="/contact">Contact</a></li>
+{% endblock %}
+
+{% block body %}
+<h2>Authentication</h2>
+<div class="auth-container">
+    <div class="auth-section" id="signin-section">
+        <h3>Sign In</h3>
+        <form action="/signin" method="post">
+            <input type="email" id="signin-email" name="email" placeholder="Email" required>
+            <input type="password" id="signin-password" name="password" placeholder="Password" required>
+            <button type="submit">Sign In</button>
+            <p><a href="#" onclick="showSection('forgot-section')">Forgot Password?</a></p>
+            <p><a href="#" onclick="showSection('signup-section')">Don't have an account? Sign Up</a></p>
+        </form>
+    </div>
+    <div class="auth-section" id="signup-section" style="display: none;">
+        <h3>Sign Up</h3>
+        <form action="/signup" method="post">
+            <input type="text" id="signup-name" name="name" placeholder="Name" required>
+            <input type="email" id="signup-email" name="email" placeholder="Email" required>
+            <input type="password" id="signup-password" name="password" placeholder="Password" required>
+            <button type="submit">Sign Up</button>
+            <p><a href="#" onclick="showSection('signin-section')">Already have an account? Sign In</a></p>
+        </form>
+    </div>
+    <div class="auth-section" id="forgot-section" style="display: none;">
+        <h3>Forgot Password</h3>
+        <form action="/forgot" method="post">
+            <input type="email" id="forgot-email" name="email" placeholder="Email" required>
+            <button type="submit">Reset Password</button>
+            <p><a href="#" onclick="showSection('signin-section')">Remembered your password? Sign In</a></p>
+        </form>
+    </div>
+</div>
+<link rel="stylesheet" href="/static/auth.css">
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('.auth-section');
+        sections.forEach(section => {
+            section.style.display = 'none';
+            section.classList.remove('slideIn');
+        });
+        const sectionToShow = document.getElementById(sectionId);
+        sectionToShow.style.display = 'block';
+        sectionToShow.classList.add('slideIn');
+    }
+</script>
+{% endblock %}

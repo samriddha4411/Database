@@ -1,0 +1,51 @@
+.dashboard-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.dashboard-section {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-section h3 {
+    margin-top: 0;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.dashboard-section p {
+    margin: 10px 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

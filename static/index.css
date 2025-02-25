@@ -1,0 +1,25 @@
+.api-features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    background-color: #f0f0f0; /* Background color for the feature sections */   background-color: #f0f0f0; /* Background color for the feature sections */
+    padding: 20px;    padding: 20px;
+    border-radius: 10px;-radius: 10px;
+}
+
+.feature {
+    background-color: #ffffff; /* Background color for individual features */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+}
+
+.feature h3 {
+    margin-top: 0;
+}
+
+.feature p {
+    margin: 10px 0;
+}

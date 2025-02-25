@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block navigate %}
+<li><a href="/">Homepage</a></li>
+<li><a href="/api-docs">API Documentation</a></li>
+<li><a href="/contact">Contact</a></li>
+<li><a href="/auth">Authenticate</a></li>
+{% endblock %}
+
+{% block body %}
+<h2>Welcome to CyberDeep Database API System</h2>
+<p>We provide robust and secure database API solutions for your business needs.</p>
+<p>Explore our API documentation and learn how to integrate our services into your applications.</p>
+<div class="api-features">
+    <div class="feature">
+        <h3>Secure Access</h3>
+        <p>Our APIs are designed with security in mind, ensuring your data is protected at all times.</p>
+    </div>
+    <div class="feature">
+        <h3>High Performance</h3>
+        <p>Experience fast and reliable access to your data with our high-performance APIs.</p>
+    </div>
+    <div class="feature">
+        <h3>Easy Integration</h3>
+        <p>Integrate our APIs seamlessly into your existing systems with comprehensive documentation and support.</p>
+    </div>
+</div>
+{% endblock %}
